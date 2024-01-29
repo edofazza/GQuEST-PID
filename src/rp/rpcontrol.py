@@ -1,4 +1,3 @@
-
 from redpitaya import RedPitaya
 
 

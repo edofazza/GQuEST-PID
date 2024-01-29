@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="715900d0-af0b-437a-924f-d854db85fe1d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/rp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rp/redpitaya.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rp/rpcontrol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rp/rppid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rp/rpscope.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rp/rpcontrol.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp/rpcontrol.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705940662558</updated>
       <workItem from="1705940678477" duration="17000" />
-      <workItem from="1706552693690" duration="3535000" />
+      <workItem from="1706552693690" duration="6326000" />
     </task>
     <servers />
   </component>
