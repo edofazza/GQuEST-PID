@@ -23,10 +23,13 @@ class RedPitayaPID(RedPitayaScope):
         self.set_iq0(phase=phase)
 
     def lock_cavity(self, phase=20):
+        #####
+        #   RAMP PIEZO
         print("Scan Piezo")
         self.scan_piezo(freq=1 / (8E-9 * (2 ** 14) * 256))
         print("Run on Modulation")
         self.set_iq0(phase=phase)
+        ######
         print("Take a scope trace")
         scope_trace = self.scope('out1', 'iq0', trigger_source='ch1_positive_edge')
         print("Done taking scope trace")
