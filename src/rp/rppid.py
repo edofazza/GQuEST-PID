@@ -85,7 +85,7 @@ class RedPitayaPID(RedPitayaScope):
             blue_signal_peak_index = np.where(blue_signal == blue_signal.max())[0][0]
             if half_scope_trace - epsilon < blue_signal_peak_index < half_scope_trace + epsilon and \
                     blue_signal.max() > .95:
-                print(i)
+                print('Temperature: :', i)
                 return True
         return False
 
@@ -112,10 +112,20 @@ class RedPitayaPID(RedPitayaScope):
     def lock_and_reset(self):
         self.reset()
         self.ramp_piezo()
-        if self.scan_temperature(1000):
+        if self.scan_temperature(500):
             time.sleep(10)
             self.lock_cavity()
-            time.sleep(5)
+            time.sleep(1)
+            _, in1 = self.scope(input2='in1')
+            print(in1.min(), in1.mean(), in1.max())
+            time.sleep(1)
+            _, in1 = self.scope(input2='in1')
+            print(in1.min(), in1.mean(), in1.max())
+            _, in1 = self.scope(input2='in1')
+            print(in1.min(), in1.mean(), in1.max())
+            time.sleep(1)
+            _, in1 = self.scope(input2='in1')
+            print(in1.min(), in1.mean(), in1.max())
         self.reset()
 
 
