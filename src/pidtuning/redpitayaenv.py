@@ -41,8 +41,8 @@ class RedPitayaEnv(gym.Env):
         self.setpoint = self.rp.redpitaya.pid0.setpoint
         # get state
         print('Setpoint: ', self.setpoint)
-        fast_output1, _ = self.rp.scope()
-        return fast_output1.max(), {}
+        _, in1 = self.rp.scope(input2='in1')
+        return in1.mean(), {}
 
     def step(
         self, action: ActType
@@ -51,8 +51,8 @@ class RedPitayaEnv(gym.Env):
         self.rp.set_pid0(action[0], action[1], action[2])
         time.sleep(0.1) # TODO: is it fine?
         # get state
-        fast_output1, phcav = self.rp.scope()
-        next_state = fast_output1.max()
+        in1, phcav = self.rp.scope(input1='in1')
+        next_state = in1.mean()
         reward = -abs(next_state - self.setpoint)
         done = False
         if phcav.max() < 0.95:
