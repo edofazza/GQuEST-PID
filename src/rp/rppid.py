@@ -116,15 +116,15 @@ class RedPitayaPID(RedPitayaScope):
             time.sleep(10)
             self.lock_cavity()
             time.sleep(1)
-            in1, _ = self.scope(input1='in1')
+            in1, _ = self.scope(input1='iq0')
             print(in1.min(), in1.mean(), in1.max())
             time.sleep(1)
-            _, in1 = self.scope(input2='in1')
+            _, in1 = self.scope(input2='iq0')
             print(in1.min(), in1.mean(), in1.max())
-            _, in1 = self.scope(input2='in1')
+            _, in1 = self.scope(input2='iq0')
             print(in1.min(), in1.mean(), in1.max())
             time.sleep(1)
-            _, in1 = self.scope(input2='in1')
+            _, in1 = self.scope(input2='iq0')
             print(in1.min(), in1.mean(), in1.max())
         else:
             print('TEMP non found')
@@ -133,4 +133,4 @@ class RedPitayaPID(RedPitayaScope):
 
 if __name__ == '__main__':
     rdpid = RedPitayaPID('169.254.167.128')
-    rdpid.lock_and_reset()
+    rdpid.loop_auto_lock()

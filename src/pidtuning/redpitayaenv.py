@@ -41,7 +41,7 @@ class RedPitayaEnv(gym.Env):
         self.setpoint = self.rp.redpitaya.pid0.setpoint
         # get state
         print('Setpoint: ', self.setpoint)
-        _, in1 = self.rp.scope(input2='in1')
+        _, in1 = self.rp.scope(input2='iq0')
         return in1.mean(), {}
 
     def step(
@@ -51,7 +51,7 @@ class RedPitayaEnv(gym.Env):
         self.rp.set_pid0(action[0], action[1], action[2])
         time.sleep(0.1)  # TODO: is it too much?
         # get state
-        in1, phcav = self.rp.scope(input1='in1')
+        in1, phcav = self.rp.scope(input1='iq0')
         next_state = in1.mean()
         reward = -abs(next_state - self.setpoint)
         done = False
