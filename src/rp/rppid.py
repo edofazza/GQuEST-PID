@@ -67,6 +67,7 @@ class RedPitayaPID(RedPitayaScope):
         # Set PID gains and corner frequencies
         # Set Point
         self.redpitaya.pid0.setpoint = poptLine[1]
+        print('Setpoint ', poptLine[1])
         self.set_pid0()
 
     @staticmethod
@@ -91,7 +92,7 @@ class RedPitayaPID(RedPitayaScope):
     def loop_auto_lock(self):
         self.reset()
         self.ramp_piezo()
-        if self.scan_temperature(1000):
+        if self.scan_temperature(500):
             time.sleep(10)
             self.lock_cavity()
             starting_time = time.time()
@@ -107,3 +108,17 @@ class RedPitayaPID(RedPitayaScope):
                     print(f'Lost lock at: {end_time}. Took {end_time-starting_time}')
                     break
         self.loop_auto_lock()
+
+    def lock_and_reset(self):
+        self.reset()
+        self.ramp_piezo()
+        if self.scan_temperature(1000):
+            time.sleep(10)
+            self.lock_cavity()
+            time.sleep(5)
+        self.reset()
+
+
+if __name__ == '__main__':
+    rdpid = RedPitayaPID('169.254.167.128')
+    rdpid.lock_and_reset()
