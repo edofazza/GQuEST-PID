@@ -112,7 +112,7 @@ class RedPitayaPID(RedPitayaScope):
     def lock_and_reset(self):
         self.reset()
         self.ramp_piezo()
-        if self.scan_temperature(500):
+        if self.scan_temperature(1000):
             time.sleep(10)
             self.lock_cavity()
             time.sleep(1)

@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="715900d0-af0b-437a-924f-d854db85fe1d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pidtuning/redpitayaenv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pidtuning/redpitayaenv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rp/rppid.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp/rppid.py" afterDir="false" />
     </list>
@@ -96,7 +95,7 @@
       <workItem from="1707405712740" duration="4031000" />
       <workItem from="1707411454960" duration="5691000" />
       <workItem from="1707512651806" duration="8142000" />
-      <workItem from="1707840855207" duration="1485000" />
+      <workItem from="1707840855207" duration="1591000" />
     </task>
     <servers />
   </component>

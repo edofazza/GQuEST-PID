@@ -49,7 +49,7 @@ class RedPitayaEnv(gym.Env):
     ) -> tuple[ObsType, SupportsFloat, bool, bool, dict[str, Any]]:
         # change PID parameters
         self.rp.set_pid0(action[0], action[1], action[2])
-        time.sleep(0.1) # TODO: is it fine?
+        time.sleep(0.1)  # TODO: is it too much?
         # get state
         in1, phcav = self.rp.scope(input1='in1')
         next_state = in1.mean()
