@@ -133,4 +133,4 @@ class RedPitayaPID(RedPitayaScope):
 
 if __name__ == '__main__':
     rdpid = RedPitayaPID('169.254.167.128')
-    rdpid.loop_auto_lock()
+    rdpid.lock_and_reset()
