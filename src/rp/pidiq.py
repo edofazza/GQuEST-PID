@@ -1,6 +1,6 @@
 import time
 import numpy as np
-from src.rp.rppid import RedPitayaPID
+from rppid import RedPitayaPID
 
 
 class PIDIQ(RedPitayaPID):
