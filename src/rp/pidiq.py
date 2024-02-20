@@ -37,3 +37,9 @@ class PIDIQ(RedPitayaPID):
                     print(f'purple (fast) signal mean: {out1.mean()}')
                     print(f'blue signal mean: {in2.mean()}')
         self.analyze()
+
+
+if __name__ == "__main__":
+    pid = PIDIQ('169.254.167.128')
+    pid.analyze()
+    

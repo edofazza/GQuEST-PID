@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="715900d0-af0b-437a-924f-d854db85fe1d" name="Changes" comment="" />
+    <list default="true" id="715900d0-af0b-437a-924f-d854db85fe1d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rp/pidiq.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp/pidiq.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +51,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/rp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="damper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GQuEST-PID" />
@@ -95,7 +103,7 @@
       <workItem from="1707840855207" duration="6820000" />
       <workItem from="1707858753809" duration="53000" />
       <workItem from="1707919495456" duration="869000" />
-      <workItem from="1708462590437" duration="2630000" />
+      <workItem from="1708462590437" duration="3411000" />
     </task>
     <servers />
   </component>
