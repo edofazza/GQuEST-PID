@@ -10,7 +10,7 @@ class PIDIQ(RedPitayaPID):
         self.counter = 1
 
     def analyze(self):
-        if self.init_time + 604800 > self.init_time:
+        if self.init_time + 604800 < time.time():
             return
         self.reset()
         self.ramp_piezo()
@@ -42,4 +42,3 @@ class PIDIQ(RedPitayaPID):
 if __name__ == "__main__":
     pid = PIDIQ('169.254.167.128')
     pid.analyze()
-    
