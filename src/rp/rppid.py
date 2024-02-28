@@ -94,7 +94,10 @@ class RedPitayaPID(RedPitayaScope):
         self.ramp_piezo()
         if self.scan_temperature(500):
             time.sleep(10)
-            self.lock_cavity()
+            try:
+                self.lock_cavity()
+            except:
+                self.loop_auto_lock()
             starting_time = time.time()
             print(f'Locked at: {starting_time}')
             while True:
