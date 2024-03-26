@@ -10,7 +10,7 @@ class PIDIQ(RedPitayaPID):
         self.counter = 1
 
     def analyze(self):
-        if self.init_time + 604800 < time.time():
+        if self.init_time + 240 < time.time():
             return
         self.reset()
         self.ramp_piezo()
@@ -25,7 +25,7 @@ class PIDIQ(RedPitayaPID):
             while True:
                 time.sleep(10)
                 print(f'Seconds after start: {time.time() - starting_time}')
-                out1, iq0 = self.scope(input2='iq0')
+                out1, iq0 = self.scope(input2='asg0')
                 _, in2 = self.scope()
 
                 if in2.max() < 0.95:
