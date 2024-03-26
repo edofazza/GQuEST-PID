@@ -10,7 +10,7 @@ class PIDIQ(RedPitayaPID):
         self.counter = 1
 
     def analyze(self):
-        if self.init_time + 240 < time.time():
+        if self.init_time + 480 < time.time():
             return
         self.reset()
         self.ramp_piezo()
@@ -39,6 +39,8 @@ class PIDIQ(RedPitayaPID):
                     self.counter += 1
                     print(f'purple (fast) signal mean: {out1.mean()}')
                     print(f'blue signal mean: {in2.mean()}')
+        else:
+            print('Could not find temperature')
         self.analyze()
 
 
