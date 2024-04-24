@@ -133,7 +133,7 @@ class RedPitayaQLearningNoPID(RedPitayaScope):
                 self.epsilon = 0.3
             self.reset()
             self.ramp_piezo()
-            if self.redpitaya.scan_temperature(500):
+            if self.scan_temperature(500):
                 time.sleep(10)
                 try:
                     self.lock_cavity()
