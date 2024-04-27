@@ -146,7 +146,7 @@ class RedPitayaQLearningNoPID(RedPitayaScope):
                 print(f'\tFast signal mean: {purple_signal.max()}')
                 state = self._get_state_index(round_to_nearest_0_1(purple_signal.max()))
                 while True:
-                    time.sleep(0.1)   # TODO: 1
+                    time.sleep(0.001)   # TODO: 1 0.1
                     # Choose action using epsilon-greedy policy
                     if np.random.rand() < self.epsilon and not self.test:
                         action = np.random.choice(self.num_actions)
@@ -155,7 +155,7 @@ class RedPitayaQLearningNoPID(RedPitayaScope):
                     print(f'\tAction index: {action}')
                     self.set_dac2(self.redpitaya.ams.dac2 + self.action_range[action])
                     print(f'\tTemperature voltage: {self.redpitaya.ams.dac2}V')
-                    time.sleep(0.01)    # TODO: 0.1
+                    time.sleep(0.0001)    # TODO: 0.1 0.01
                     # Get the next state, reward, and system_unlock
                     purple_signal, blue_signal = self.scope()
                     print(f'\tFast signal mean: {purple_signal.max()}')

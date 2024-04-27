@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="715900d0-af0b-437a-924f-d854db85fe1d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/rp/rpqlnopid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +122,8 @@
       <workItem from="1711498118474" duration="15000" />
       <workItem from="1713793647383" duration="16000" />
       <workItem from="1713793732846" duration="15000" />
-      <workItem from="1713975864230" duration="1161000" />
+      <workItem from="1713975864230" duration="2326000" />
+      <workItem from="1714072306136" duration="10000" />
     </task>
     <servers />
   </component>
