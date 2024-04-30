@@ -22,7 +22,7 @@ class RedPitayaQLearningNoPID(RedPitayaScope):
         self.voltage_range = np.arange(-1, 1.1, 0.1)
         self.num_states = len(self.voltage_range)  # 21
         # actions
-        self.action_range = np.arange(-.001, .0015, .0005)
+        self.action_range = np.arange(-.01, .015, .005)  # -.001, .0015, .0005
         self.num_actions = len(self.action_range)  # 5
         # Q-Learning parameters
         self.learning_rate = learning_rate
@@ -142,8 +142,9 @@ class RedPitayaQLearningNoPID(RedPitayaScope):
                 system_unlock = False
                 print(f'\tLocked at: {time.time()}')
                 print(f'\tInitial temperature voltage: {self.redpitaya.ams.dac2}V')
-                purple_signal, _ = self.scope()
-                print(f'\tFast signal mean: {purple_signal.max()}')
+                purple_signal, blue_signal = self.scope()
+                print(f'\tFast signal max: {purple_signal.max()}')
+                print(f'\tPD Voltage after cavity max: {blue_signal.max()}')
                 state = self._get_state_index(round_to_nearest_0_1(purple_signal.max()))
                 while True:
                     time.sleep(0.001)   # TODO: 1 0.1
@@ -158,7 +159,8 @@ class RedPitayaQLearningNoPID(RedPitayaScope):
                     time.sleep(0.0001)    # TODO: 0.1 0.01
                     # Get the next state, reward, and system_unlock
                     purple_signal, blue_signal = self.scope()
-                    print(f'\tFast signal mean: {purple_signal.max()}')
+                    print(f'\tFast signal max: {purple_signal.max()}')
+                    print(f'\tPD Voltage after cavity max: {blue_signal.max()}')
                     if blue_signal.max() < 0.95:
                         print(f'\tLost lock at: {time.time()}')
                         system_unlock = True
