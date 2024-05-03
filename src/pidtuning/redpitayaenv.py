@@ -7,7 +7,7 @@ import numpy as np
 from gymnasium.core import ObsType, ActType, RenderFrame
 import scipy
 
-from ..rp.rpscope import RedPitayaScope
+from src.rp.rpscope import RedPitayaScope
 
 
 class RedPitayaEnv(gym.Env):
