@@ -4,7 +4,6 @@ from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.callbacks import CheckpointCallback
 
 from redpitayaenv import RedPitayaEnv
-from rpwrapper import SkipSteps
 
 
 def create_env(skip: int = 15):
