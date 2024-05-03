@@ -15,7 +15,7 @@ class RedPitayaEnv(gym.Env):
         self.rp = rp
         self.action_space = spaces.Box(low=-0.3, high=0.3, shape=(1,), dtype=np.float32)
         self.observation_space = spaces.Box(low=0, high=1, shape=(1,), dtype=np.float32)
-        self.reward_range = (-1, 0)
+        self.reward_range = (-0.95, 0.04)
         self.reset()
 
     def scan_piezo(self, asg: bool = True, output_direct: str = 'out1', amp: float = 0.5,
