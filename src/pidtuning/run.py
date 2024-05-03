@@ -9,7 +9,7 @@ from rpwrapper import SkipSteps
 
 def create_env(skip: int = 15):
     env = RedPitayaEnv()
-    env = SkipSteps(env, skip)
+    #env = SkipSteps(env, skip)
     return env
 
 
@@ -39,10 +39,10 @@ def run():
     model = ppo_model(
         create_env(),
         verbose=1,
-        n_steps=512,
-        n_epochs=10,
+        n_steps=256,
+        n_epochs=3,
         device='cpu',
-        batch_size=64
+        batch_size=16
     )
     checkpoint_callback = CheckpointCallback(
         save_freq=512,
