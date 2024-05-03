@@ -11,8 +11,8 @@ from rpscope import RedPitayaScope
 
 
 class RedPitayaEnv(gym.Env):
-    def __init__(self, hostname: str = '169.254.167.128'):
-        self.rp = RedPitayaScope(hostname)
+    def __init__(self, rp):
+        self.rp = rp
         self.action_space = spaces.Box(low=-0.3, high=0.3, shape=(1,), dtype=np.float32)
         self.observation_space = spaces.Box(low=0, high=1, shape=(1,), dtype=np.float32)
         self.reward_range = (-1, 0)

@@ -4,10 +4,11 @@ from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.callbacks import CheckpointCallback
 
 from redpitayaenv import RedPitayaEnv
+from rpscope import RedPitayaScope
 
 
 def create_env(skip: int = 15):
-    env = RedPitayaEnv()
+    env = RedPitayaEnv(RedPitayaScope('169.254.167.128'))
     #env = SkipSteps(env, skip)
     return env
 
