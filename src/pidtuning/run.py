@@ -45,12 +45,12 @@ def run():
         batch_size=16
     )
     checkpoint_callback = CheckpointCallback(
-        save_freq=512,
+        save_freq=1024*10,
         save_path='models',
         name_prefix='pid_n512_e10_b64',
         verbose=1
     )
-    model.learn(total_timesteps=512 * 60 * 144, callback=checkpoint_callback)   # six days
+    model.learn(total_timesteps=1024 * 50_000, callback=checkpoint_callback)   # six days
 
 
 if __name__ == '__main__':
