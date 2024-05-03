@@ -1,12 +1,13 @@
 from abc import ABC, abstractmethod
 from pyrpl import Pyrpl
 
+
 class RedPitaya(ABC):
     @abstractmethod
     def __init__(self, hostname: str, user: str = 'root', password: str = 'root', config: str = 'fermi',
                  gui: bool = False):
         try:
-            p = Pyrpl(hostname=hostname, user=user, password=password, config=config, gui=gui)
+            p = Pyrpl(hostname=hostname, user=user, password=password, gui=gui)
             self.redpitaya = p.rp  # Access the RedPitaya object in charge of communicating with the board
         except Exception as e:
             print(e)
