@@ -52,3 +52,5 @@ class RedPitayaController(RedPitaya):
         # input or output
         self.redpitaya.pid0.input = input
         self.redpitaya.pid0.output_direct = output_direct
+
+
