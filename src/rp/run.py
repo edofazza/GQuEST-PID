@@ -36,7 +36,7 @@ def ppo_model(env, verbose: int = 1, n_steps: int = 2048 * 8,
 
 
 def run():
-    RedPitayaScope('169.254.167.128')
+    RedPitayaScope(hostname='169.254.167.128')
     """model = ppo_model(
         create_env(),
         verbose=1,
