@@ -8,9 +8,9 @@ from rpscope import RedPitayaScope
 
 
 def create_env(skip: int = 15):
-    env = RedPitayaEnv(RedPitayaScope('169.254.167.128'))
+    #env = RedPitayaEnv(RedPitayaScope('169.254.167.128'))
     #env = SkipSteps(env, skip)
-    return env
+    return #env
 
 
 def ppo_model(env, verbose: int = 1, n_steps: int = 2048 * 8,
