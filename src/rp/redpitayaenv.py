@@ -86,7 +86,7 @@ class RedPitayaEnv(gym.Env):
         *,
         seed=None,
         options=None,
-    ) -> tuple[ObsType, dict[str, Any]]:
+    ):
         # Reset Red Pitaya
         self.rp.reset()
         # set temperature
@@ -106,7 +106,7 @@ class RedPitayaEnv(gym.Env):
 
     def step(
         self, action: ActType
-    ) -> tuple[ObsType, SupportsFloat, bool, bool, dict[str, Any]]:
+    ):
         time.sleep(0.001)
         # change temperature
         self.rp.set_dac2(self.rp.redpitaya.ams.dac2 + action)
@@ -120,7 +120,7 @@ class RedPitayaEnv(gym.Env):
             done = True
         return next_state, reward, done, False, {}  # next_obs, reward, terminated (bool), truncated (bool), info (dict)
 
-    def render(self) -> RenderFrame | list[RenderFrame] | None:
+    def render(self):
         return None
 
     def close(self):
