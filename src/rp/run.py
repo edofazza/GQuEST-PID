@@ -5,7 +5,7 @@ from stable_baselines3.common.callbacks import CheckpointCallback
 
 from redpitayaenv import RedPitayaEnv
 from rpscope import RedPitayaScope
-from pyrpl import RedPitaya
+from pyrpl import Pyrpl
 
 def create_env(skip: int = 15):
     #env = RedPitayaEnv(RedPitayaScope('169.254.167.128'))
@@ -55,5 +55,5 @@ def run():
 
 
 if __name__ == '__main__':
-    p = RedPitaya(hostname='169.254.167.128')
+    p = Pyrpl(hostname='169.254.167.128')
     #run()
