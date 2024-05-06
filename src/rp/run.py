@@ -36,7 +36,8 @@ def ppo_model(env, verbose: int = 1, n_steps: int = 2048 * 8,
 
 
 def run():
-    model = ppo_model(
+    RedPitayaScope('169.254.167.128')
+    """model = ppo_model(
         create_env(),
         verbose=1,
         n_steps=256,
@@ -50,7 +51,7 @@ def run():
         name_prefix='pid_n512_e10_b64',
         verbose=1
     )
-    model.learn(total_timesteps=1024 * 50_000, callback=checkpoint_callback)   # six days
+    model.learn(total_timesteps=1024 * 50_000, callback=checkpoint_callback)   # six days"""
 
 
 if __name__ == '__main__':
