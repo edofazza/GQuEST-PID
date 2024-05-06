@@ -15,7 +15,7 @@ def create_env(skip: int = 15):
 
 def ppo_model(env, verbose: int = 1, n_steps: int = 2048 * 8,
               batch_size: int = 64, n_epochs: int = 10, gamma: float = 0.999,
-              device: str = 'cpu', file_name: str | None = None):
+              device: str = 'cpu', file_name=None):
     assert device in ['cuda', 'mps', 'cpu']
     set_random_seed(42, 'cuda' == device)
     if file_name is not None and exists(file_name + '.zip'):
