@@ -7,8 +7,7 @@ class RedPitaya(ABC):
     def __init__(self, hostname: str, user: str = 'root', password: str = 'root', config: str = 'fermi',
                  gui: bool = False):
         try:
-            p = pyrpl.RedPitaya(hostname=hostname, config=config, user=user, password=password)
-            self.redpitaya = p  # Access the RedPitaya object in charge of communicating with the board
+            self.redpitaya = pyrpl.RedPitaya(hostname=hostname, config=config, user=user, password=password)
         except Exception as e:
             print(e)
 
