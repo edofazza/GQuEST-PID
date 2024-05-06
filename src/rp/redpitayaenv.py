@@ -1,5 +1,5 @@
 import time
-from typing import Any, SupportsFloat
+from typing import Any, SupportsFloat, Union
 
 import gymnasium as gym
 from gymnasium import spaces
@@ -84,8 +84,8 @@ class RedPitayaEnv(gym.Env):
     def reset(
         self,
         *,
-        seed: int | None = None,
-        options: dict[str, Any] | None = None,
+        seed=None,
+        options=None,
     ) -> tuple[ObsType, dict[str, Any]]:
         # Reset Red Pitaya
         self.rp.reset()

@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="715900d0-af0b-437a-924f-d854db85fe1d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pyrpl-noqt/pyrpl/pyrpl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rp/redpitaya.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp/redpitaya.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rp/redpitayaenv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp/redpitayaenv.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +132,7 @@
       <workItem from="1714748333072" duration="7799000" />
       <workItem from="1714940397918" duration="751000" />
       <workItem from="1714941260585" duration="120000" />
-      <workItem from="1714949032293" duration="3893000" />
+      <workItem from="1714949032293" duration="4091000" />
     </task>
     <servers />
   </component>
