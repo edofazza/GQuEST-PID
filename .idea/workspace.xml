@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="715900d0-af0b-437a-924f-d854db85fe1d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pyrpl-noqt/pyrpl/pyrpl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rp/redpitayaenv.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp/redpitayaenv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rp/redpitaya.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rp/redpitaya.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +56,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pyrpl-noqt/pyrpl" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/rp" />
     </key>
   </component>
@@ -128,7 +132,10 @@
       <workItem from="1714224580239" duration="290000" />
       <workItem from="1714310731685" duration="91000" />
       <workItem from="1714491433012" duration="2305000" />
-      <workItem from="1714748333072" duration="6554000" />
+      <workItem from="1714748333072" duration="7799000" />
+      <workItem from="1714940397918" duration="751000" />
+      <workItem from="1714941260585" duration="120000" />
+      <workItem from="1714949032293" duration="3893000" />
     </task>
     <servers />
   </component>
